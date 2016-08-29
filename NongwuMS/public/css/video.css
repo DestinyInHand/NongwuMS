@@ -1,0 +1,139 @@
+body{
+  margin: 0 auto;
+  width:1024px;
+  height:1624px;
+  background-color: #fff;
+}
+
+
+/*path and search*/
+.container_top{
+  width: 1024px;
+  height: 48px;
+  margin: 10px auto;
+  background-color: #f0f0f0;
+  font-size: 16px;
+}
+
+.container_top form{
+  float: right;
+  margin:auto;
+  margin-top: 12px;
+  margin-right: 100px;
+}
+.container_top span{
+  height: 48px;
+  line-height: 48px;
+  margin-left: 40px;
+}
+/*=====end======*/
+
+.page_container{
+  width: 100%;
+  margin: 20px auto;
+  position: relative;
+  /*background-color: #f0f0f0;*/
+}
+
+.side_nav{
+  width: 50px;
+  margin-left: 20px;
+  margin-right: 100px;
+}
+.side_nav li{
+  height: 60px;
+}
+.side_nav li a{
+  padding: 0;
+  width: 50px;
+}
+
+.page_body{
+  width: 900px;
+  height: 600px;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  margin-left: 20px;
+  border:1px solid #979797;
+}
+
+ul.video_sort{
+  width: 100%;
+  height: 48px;
+  background-color: #f0f0f0;
+  margin:0 0 40px 0;
+  list-style: none;
+  padding: 0;
+}
+
+.video_sort li{
+  float: left;
+  width: 16%;
+  line-height: 48px;
+  text-align: center;
+  font-size: 1.6em;
+  cursor: pointer;
+}
+
+.video_sort li:hover{
+  color:#187015;
+}
+.video_sort li.chooseOn{
+  color:#187015;
+}
+
+/*单个视频的信息*/
+.video{
+  height: 120px;
+  width: 350px;
+  position: relative;
+  float: left;
+  margin:10px 20px 10px 50px;
+}
+
+.v_cover{
+  height: 120px;
+  width: 160px;
+  float: left;
+  margin-right: 10px;
+}
+
+.cover_page{
+  height: 120px;
+  width: 160px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.0);
+}
+
+.cover_page:hover{
+  margin: 0;
+  background-color: rgba(0, 0, 0, 0.2);;
+  z-index: 100;
+  cursor: pointer;
+}
+
+.v_title{
+  font-size: 16px;
+  padding-top: 5px;
+}
+.v_source,.v_episode, .v_uptime{
+  margin-top: 12px;
+  color:#333131;
+  font-size: 12px;
+}
+
+.playbutton{
+  position: absolute;
+  height: 24px;
+  width: 46px;
+  font-size: 10px;
+  color: #f0f0f0;
+  background-color: #187015;
+  border-radius: 5px;
+  bottom: 10px;
+  right:12px;
+  cursor: pointer;
+}

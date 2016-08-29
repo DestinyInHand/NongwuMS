@@ -1,0 +1,306 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    width:1024px;
+    height:1624px;
+    margin: 0 auto;
+    font-size: 1.0em;
+}
+
+/*=======最顶部设置top======*/
+.top{
+    height: 45px;
+    background-color: #f2f2f2;
+}
+/*个人中心 绿字*/
+.top .userCenter{
+    margin: 10px 30px;
+    font-size: 2.0em;
+    color:#0b6d0b;
+    height: 45px;
+    line-height: 45px;
+}
+/*设置*/
+.top .p_set{
+    font-size: 1.6em;
+    margin-left: 760px;
+    cursor: pointer;
+}
+.top img {
+    position: relative;
+    width: 16px;
+    height:16px;
+    top:2px;
+    cursor: pointer;
+}
+.top img:hover{
+
+}
+/*========top-end========*/
+
+
+/*=====用户信息-顶部显示 user_top====*/
+.user_top{
+    height: 140px;
+    position: relative;
+}
+
+.user_top .head{
+    width: 120px;
+    height:120px;
+    margin: 10px 30px 0;
+    position: absolute;
+}
+.user_top .motto ,.user_top .username{
+    margin: 15px 0 0 180px;
+}
+.user_top .username{
+    font-size: 2.5em;
+    font-weight: 300;
+    padding-top: 30px;
+}
+.user_top .sex_img{
+    margin-left: 180px;
+    /*margin-top: 6px;*/
+    padding-top: 10px;
+    width: 20px;
+    height: 20px;
+    /*vertical-align: center;*/
+}
+.user_top .points{
+    display: inline;
+    vertical-align: center;
+    font-size: 16px;
+}
+.user_top .motto{
+    font-size: 1.5em;
+}
+
+.user_top .num{
+    position: absolute;
+    height: 20px;
+    width:  40px;
+    bottom: 10px;
+    color: #979797;
+    text-align: center;
+
+    margin-right: 20px;
+}
+.user_top .num span{
+    width: 40px;
+    text-align: center;
+    position: absolute;
+    left:0;
+    top:-40px;
+    font-size: 2.6em;
+    color:#222;
+    font-weight: bold;
+}
+
+.user_top .sign{
+    position: absolute;
+    width: 160px;
+    height:40px;
+    top:10px;
+    right:20px;
+}
+.user_top .sign {
+    height: 40px;
+}
+.user_top .sign span{
+    color: #4d92e3;
+    cursor: pointer;
+}
+
+/*==========user_top-end========*/
+
+/*侧边栏*/
+.sidebar {
+/*position: absolute;*/
+    top:210px;
+    left: 160px;
+}
+
+ul{
+    list-style: none;
+}
+ul li:hover{
+    color:red;
+    cursor: pointer;
+}
+
+
+.sideNav{
+    margin-top: 30px;
+    width: 100px;
+    margin-left: 20px;
+}
+.sideNav li{
+    margin: auto 0;
+    padding: 10px 0;
+
+    height: 30px;
+    line-height: 30px;
+    font-size: 15px;
+    text-align: right;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.sideNav li:nth-child(1){
+    background-image: url("../img/ic_home.png");
+}
+.sideNav li:nth-child(1):hover{
+    background-image: url("../img/ic_home_red.png");
+}
+.sideNav li:nth-child(2){
+    background-image: url("../img/ic_daily_record.png");
+}
+.sideNav li:nth-child(2):hover{
+    background-image: url("../img/ic_daily_record_red.png");
+}
+.sideNav li:nth-child(3){
+    background-image: url("../img/ic_ques_ans.png");
+}
+.sideNav li:nth-child(3):hover{
+    background-image: url("../img/ic_ques_ans_red.png");
+}
+.sideNav li:nth-child(4){
+    background-image: url("../img/ic_subscriber.png");
+}
+.sideNav li:nth-child(4):hover{
+    background-image: url("../img/ic_subscriber_red.png");
+}
+.sideNav li:nth-child(5){
+    background-image: url("../img/ic_collection.png");
+}
+.sideNav li:nth-child(5):hover{
+    background-image: url("../img/ic_collection_red.png");
+}
+
+
+.side_msg{
+    width: 100px;
+    height: 200px;
+    margin-top: 80px;
+}
+.side_msg li{
+    width:150px;
+    height: 50px;
+    margin: auto 50px;
+    line-height: 30px;
+    padding-left: 50px;
+    background-repeat: no-repeat;
+    font-size: 15px;
+}
+
+.side_msg li:nth-child(1){
+    background-image: url("../img/ic_todo.png");
+}
+.side_msg li:nth-child(1):hover{
+    background-image: url("../img/ic_todos_red.png");
+}
+.side_msg li:nth-child(2){
+    background-image: url("../img/ic_messages.png");
+}
+.side_msg li:nth-child(2):hover{
+    background-image: url("../img/ic_messages_red.png");
+}
+.side_msg li:nth-child(3){
+    background-image: url("../img/ic_buy.png");
+}
+.side_msg li:nth-child(3):hover{
+    background-image: url("../img/ic_buy_red.png");
+}
+.side_msg li:nth-child(4){
+    background-image: url("../img/ic_qrcode.png");
+}
+.side_msg li:nth-child(4):hover{
+    background-image: url("../img/ic_qrcode_red.png");
+}
+/*=========侧边栏-end============*/
+
+
+/*最新动态*/
+.news{
+    width: 710px;
+    position: relative;
+    top: -520px;
+    left: 260px;
+    padding-top: 60px;
+}
+.news .k_name{
+    font-size: 1.6em;
+    margin-bottom: 10px;
+}
+.news .button_putnews{
+    width:80px;
+    height:25px;
+    color:#FFFFFF;
+    position: absolute;
+    top: 10px;
+    right:10px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    background-color: #B94545;
+    text-align: center;
+    line-height: 25px;
+    cursor: pointer;
+}
+
+.oneNews img{
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    left: 10px;
+}
+
+.putaquestion,.uptime,.username{
+    margin: 10px 0 10px 60px;
+    color:#000000;
+    font-weight: bold;
+    font-size: 1.4em;
+}
+.oneNews .uptime{
+    color:#4a4a4a;
+    font-size: 0.7em;
+    font-weight: 400;
+}
+
+.oneNews .question{
+    width:650px;
+    height: 100px;
+    background-color: lightsteelblue;
+    position: absolute;
+    left: 60px;
+}
+.oneNews .question .type{
+    border-radius: 5px;
+    color: #ffffff;
+    background-color: #34AB30;
+    width: 50px;
+    text-align: center;
+    height: 18px;
+    line-height: 18px;
+
+    position: absolute;
+    right:60px;
+    top:10px;
+}
+.oneNews .question img{
+    margin: 30px 20px;
+}
+.questionTitle{
+    padding-top: 30px;
+}
+.oneNews .question p{
+    margin:0 0 10px 90px;
+    font-weight: bold;
+}
+.questionContent{
+    font-size: 1.5em;
+}
+.dayCount{
+    font-size: 1.4em;
+}

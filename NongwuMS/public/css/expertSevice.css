@@ -1,0 +1,120 @@
+#rightPart{
+	width:850px;
+	float:left;
+	margin-left: 40px;
+	/*margin-top: 28px;*/
+}
+
+
+#professor{
+	float:left;
+	width:100%;
+	margin-top: 10px;
+	height:1100px;
+	overflow: auto;
+}
+
+
+.proIntro{
+	float:left;
+	margin-left: 40px;
+	background:#D8D8D8;
+	border-radius: 5px;
+	width:189px;
+	height:262px;
+}
+.proIntro img{
+	margin-top:40px;
+	margin-left: 30px;
+}
+.proName{
+	margin-top:30px;
+	font-size: 20px;
+	color: #000000;
+}
+
+
+ul.side_nav{
+	width:100px;
+	float:left;
+	margin-top: 20px;
+}
+ul.side_nav li{
+	width:103px;
+}
+ul.side_nav li a{
+	width:103px;
+}
+
+.subtitle{
+	font-size: 2.0em;
+	margin-left: 20px;
+}
+
+.card{
+	width:780px;
+	height:180px;
+	border-radius: 10px;
+	margin-left: 40px;
+	font-family: serif;
+	/*border:1px solid #237C23;*/
+	background:#F0F0F0;
+	margin-bottom: 5px;
+}
+.card img{
+	border-radius: 70px;
+	margin:20px ;
+}
+.card p{
+	font-size: 1.7em;
+	font-weight: border;
+	position:relative;
+	margin-top:-170px;
+	padding-top:0px;
+	margin-left: 180px;
+	margin-bottom: 0px;
+}
+.card table{
+	border-collapse:separate;
+	border-spacing: 1px;
+	border-color: #fff;
+	width:580px;
+	height:140px;
+	float:right;
+
+}
+.card table tr{
+	width:100%;
+	/*height:30px;*/
+	padding:0px;
+	margin:0px;
+}
+
+.card table tr td:not(.first_td){
+	font-size: 1.2em;
+	font-weight: normal;
+}
+.card table tr td.first_td{
+	font-size: 1.5em;
+	width:10%;
+	height:30px;
+	font-weight: border;
+}
+.card table tr td.first_td_fourth{
+	width:15%;
+	font-size: 1.5em;
+	font-weight: border;
+}
+.card table tr td.content{
+	width:18%;
+}
+.title{
+	font-weight: border;
+	font-size: 3.0em;
+	margin:0px;
+	padding:0px;
+}
+.card_a{
+	text-decoration: none;
+	color:#000;
+}

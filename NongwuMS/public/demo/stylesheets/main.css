@@ -1,0 +1,344 @@
+/*主题红 #d0021b*/
+/*悬浮深红 #a50115*/
+/*背景灰 #fafafa*/
+
+/*-------------------首页 mainPage---------------------*/
+
+/*mianPage >header*/
+.header{
+  background-repeat:no-repeat;
+  background-position:center 0;
+  -webkit-background-size:cover;
+  background-size:cover;
+  /*padding可以控制里面控件的位置*/
+  padding:0px 0 0;
+  /*text-align:center;*/
+  width: 100%;
+  height: 900px;
+  position:absolute;
+  z-index:-1;
+}
+.header .container{
+  height: 150px;
+  position:relative;
+}
+.header .header_left{
+  height: 120px;
+  margin: 15px 0px;
+}
+.header .header_right{
+  height: 90%;
+  margin-right: 0px;
+  bottom: 0px;
+  right: 30px;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+  position: absolute;
+}
+/*mianPage >header --end--*/
+
+/*首页格式*/
+/*.container-fluid{
+  padding-left: 0px;
+  padding-right: 0px;
+}*/
+
+.sb_Gradient{
+  padding-top: 0px;
+  width: 100%;
+  height: 30px;
+  vertical-align:top;
+}
+.mainframe{
+  /*width:80%;*/
+  margin: 0 auto;
+  background-color: #ffffff !important;
+}
+
+/*主页表格*/
+.mainPtable{
+  table-layout:fixed;
+  word-break:break-all;
+  overflow:hidden;
+  margin-bottom: 0px;
+  }
+
+.mainPtable > thead {
+    height: 38px;
+    background-color: #d0021b;
+}
+  .mainPtable .thead_right{
+    text-align:right;
+  }
+
+  .mainPtable > tbody {
+    background-color: #fdfcfa;
+  }
+  .mainPtable > tbody >tr >td{
+  cursor:default;
+  }
+.mainPtable > thead > tr > th,
+.mainPtable > tbody > tr > td{
+  border: none;
+  height: 36px;
+  display：block;
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+}
+
+.mainPtable > thead > tr > th {
+  color:#fff;
+  padding-top: 12px;
+  padding-bottom: 8px;
+  height: 38px;
+  line-height: 38px;
+  font-size: 20px;
+  orphans: 3;
+  widows: 3;
+  font-weight: 500;
+  line-height: 1.1;
+}
+.mainPtable > thead > tr > th > a{
+  color:#fff;
+  /*font-size: 20px;*/
+  font-size: 0.7em;
+}
+/*------end------*/
+
+
+/*轮播图片*/
+.carousel-inner > .item > img,
+  .carousel-inner > .item > a > img {
+      width: 100%;
+      /*height: 270px;*/
+      height: auto;
+      margin: 0 auto;
+      display:block;
+      margin:auto;
+      z-index: -1;
+      position: static;
+  }
+  .carousel-indicators{
+    top:240px;
+  }
+.carousel-inner > .item > .carousel-caption {
+  top:200px;
+}
+
+.mainrow{
+  margin-bottom: 24px;
+}
+
+.col-frame{
+  overflow:hidden;
+	border:none;
+  margin-left:2%;
+  /*margin-right:;*/
+  margin-top:24px;
+  height: 272px;
+  border-collapse: separate;
+  *border-collapse: collapsed;
+  /*border: 1px solid #d0021b !important;*/
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  background-color:#fafafa;
+  box-shadow: 3px 5px 14px #9b9b9b;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+.col-frame .table_headshadow {
+  background-color:transparent;
+  width:101% ;
+  height:2px;
+  top:38px;
+  position: absolute;
+  right: 0px;
+  z-index: 1;
+  box-shadow: 0px 6px 10px #9b9b9b;
+
+}
+/*-------------------首页 mainPage end---------------------*/
+
+
+
+/*-------------------affairs村务详情---------------------------*/
+.btn-addr{
+	border-radius:25px;
+	-webkit-border-radius:25px;
+	-moz-border-radius:5px;
+	background-color:#c4d9f2;
+	border:none;
+	/*margin-left:12px;*/
+  margin-right: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 8 15px;
+	}
+.btn-addr:focus,
+.btn-addr.focus {
+  color: #fff;
+  background-color: #31b0d5;
+  border-color: #1b6d85;
+}
+.btn-addr:hover {
+  color: #fff;
+  background-color: #31b0d5;
+  border-color: #269abc;
+}
+.btn-addr:active,
+.btn-addr.active,
+.open > .dropdown-toggle.btn-info {
+  color: #fff;
+  background-color: #31b0d5;
+  border-color: #269abc;
+}
+.btn-addr:active:hover,
+.btn-addr.active:hover,
+.open > .dropdown-toggle.btn-info:hover,
+.btn-addr:active:focus,
+.btn-addr.active:focus,
+.open > .dropdown-toggle.btn-info:focus,
+.btn-addr:active.focus,
+.btn-addr.active.focus,
+.open > .dropdown-toggle.btn-info.focus {
+  color: #fff;
+  background-color: #269abc;
+  border-color: #1b6d85;
+}
+.btn-addr:active,
+.btn-addr.active,
+.open > .dropdown-toggle.btn-info {
+  background-image: none;
+}
+.btn-addr .badge {
+  color: #5bc0de;
+  background-color: #fff;
+}
+
+.returnSpan{
+  color:#d8d8d8;
+  margin-left: -14px;
+  padding-left: 0;
+}
+.returnbar{
+  width: 102%;
+  padding: 6px;
+  border-radius:10px;
+  background-color:#d0021b;
+  color:#fff;
+}
+.returnbar a{
+  color: #fff;
+  text-decoration: none;
+}
+.returnbar a:hover{
+  color: #fff;
+  text-decoration: none;
+}
+
+.returnbar h5{
+  margin-top: 6px;
+  margin-bottom: 6px;
+}
+#townandvillage{
+  text-align: right;
+}
+
+
+.p2table{
+  table-layout:fixed;
+  word-break:break-all;
+}
+.p2table thead{
+  height: 36px;
+}
+.p2table tbody  tr {
+  height: 36px;
+  display：block;
+  white-space:nowrap;
+   overflow:hidden;
+  text-overflow:ellipsis;
+  font-size: 14px;
+  /*height: 36px;*/
+}
+
+
+
+td{
+/*width:100%;*/
+word-break:keep-all;
+/* 不换行 */
+white-space:nowrap;
+/* 不换行 */
+overflow:hidden;
+/* 内容超出宽度时隐藏超出部分的内容 */
+text-overflow:ellipsis;
+/* 当对象内文本溢出时显示省略标记(...) ；需与overflow:hidden;一起使用。*/
+}
+
+
+/*以row做框架时固定大小 除主页外的页面*/
+.row-frame{
+  /*max-width:90%;*/
+  margin: auto;
+  padding-top: 20px;
+}
+
+.btn-group-vertical> button > a{
+  text-decoration: none;
+  color: #444444;
+}
+.table thead{
+  color:#9b9b9b;
+}
+
+
+/*侧边栏 */
+.slider{
+  margin-top: 30px;
+  font-size: 16px;
+}
+
+.slider span{
+  cursor: pointer;
+  margin-right: 20px;
+}
+/*？?active最好不要这样写，除侧边栏外还有许多地方使用了active*/
+.slider span .active{
+  color:#3E8AE5;
+}
+
+#searchBtn{
+  cursor: pointer;
+}
+
+.searchIndecate{
+  top:8;
+  position: absolute;
+  display: block;
+  width: 25px;
+  height: 10px;
+  background: #3E8AE5;
+  border-radius: 10px;
+}
+
+.keywords{
+  margin-top: 40px;
+}
+
+form{
+  margin-top: 40px;
+  width: 80%;
+}
+
+div .searchOver{
+  position: relative;
+}
+
+.result{
+  width: 80%;
+  display: none;
+}
+/*侧边栏 end*/

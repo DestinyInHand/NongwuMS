@@ -1,0 +1,136 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="renderer" content="webkit">
+  <title>调查统计</title>
+  <script charset="utf-8" src="/javascripts/jquery-2.2.1.js"></script>
+  <link rel='stylesheet' href='/stylesheets/bootstrap/css/bootstrap.css' />
+  <link rel='stylesheet' href='/stylesheets/index.css' />
+  <script charset="utf-8" src="/stylesheets/bootstrap/js/bootstrap.js"></script>
+
+</head>
+<body>
+  <nav class="navbar navbar-default ">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">后台管理</a>
+      </div>
+    <% if(isSuperAdmin==1) {%>
+    <% show = "block"%>
+    <% } else {%>
+    <% show = "none"%>
+    <% }%>
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse top-nav" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav nav_list">
+          <li>
+            <a href="/admin_dataman" style="display:<%=show%>">
+              用户管理
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <li  >
+            <a href="/admin_region" style="display:<%=show%>">栏目管理</a>
+          </li>
+         <!--  <li >
+            <a href="/admin_policy" style="display:<%=show%>">惠农政策</a>
+          </li>
+          <li>
+            <a href="/admin_project" style="display:<%=show%>">惠农项目</a>
+          </li> -->
+          <li class="">
+            <a href="/admin_event">内容管理</a>
+          </li>
+          <li class="active">
+            <a href="/admin_analyze" style="display:<%=show%>">调查统计</a>
+          </li>
+
+        </ul>
+
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <a href="#" style="padding-right: 0px">
+              <%= username %>
+              
+            </a>
+            
+          </li>
+          <li style="margin-left: 0px">
+            <a href="/admin_login/logout" style="color:#337AB7">注销</a>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="content container">
+     <div class="row" style="background-color:#FFFFFF">
+      <div class="jumbotron">
+        <h2 id="jump_title">
+          江苏农业科技云平台服务
+        </h2>
+        <br>
+        <p id="content">
+          &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp实现"1+N"的农业科技综合服务平台，通过农业综合服务大数据平台，开发了N个支撑业务系统，通过多应用终端实现平台的无缝接入，实现了一整套在线农业科技推广服务！
+        </p>
+        <p>
+          <br/>
+          <a class="btn btn-primary btn-large" href="">了解更多</a>
+        </p>
+      </div>
+    </div>
+    <br>
+    <!-- 推广员分布图 -->
+    <div id="main" style="height:500px"></div>
+    <br><br><hr/><br>
+    <!-- 南京市各区农技推广任务 -->
+    <div id="nanjing" style="height:500px"></div>
+    <br><br><hr/><br>
+    <!-- 南京市各区农技推广任务————柱状图 -->
+    <div id="nanjing_work" style="height:400px"></div>
+    <br><br><hr/><br>
+    <!-- 用户数据统计报表-->
+    <div id="PersonFlu" style="height: 400px"></div>
+    <br><br><hr/><br>
+    <!--资讯各栏目文章统计报表-->
+    <div id="Articlepie" style="height: 400px"></div>
+    <br><br><hr/><br>
+    <!--资讯各栏目文章统计报表-->
+    <div id="Countbar" style="height: 400px"></div>
+    <br><br><hr/><br>
+    <!-- 各区县终端使用情况-->
+    <div id="MapView" style="height: 500px"></div>
+    </div>
+    <script src="/js/jquery.min.js"></script>
+ <!--    <script src="/js/bootstrap.min.js"></script> -->
+    <script src="/echarts/build/dist/echarts.js"></script>
+    // <script>
+    //   $('a').css({
+    //     "font-height":"bold",
+    //     "font-size":"large",
+    //     "font-family":"SimHei"
+    //   });
+    //   $('#jump_title').css("font-family","SimHei");
+    //   $('#content').css({"font-size":"medium","font-style":"italic"});
+    // </script>
+    <script src="/js/jiangsu.js"></script>
+    <script src="/js/nanjing.js"></script>
+    <script src="/js/nanjing_bar.js"></script>
+    <script src="js/jiangsu_map.js"></script>
+    <script src="js/PersonFlu.js"></script>
+    <script src="js/ArticlePie.js"></script>
+    <script src="js/CounterBar.js"></script>
+</body>
+
+   
+  </html>

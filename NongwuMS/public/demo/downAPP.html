@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>平原村务APP下载</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link rel='stylesheet' href="stylesheets/site.css" type="text/css"/>
+  <link rel="stylesheet" href="stylesheets/bootstrap/css/bootstrap.min.css">
+
+  <script src="javascripts/jquery.js"></script>
+  <script src="javascripts/basicSetup.js"></script>
+<style>
+
+@media screen and (max-width: 960px){
+    
+    .wyf{
+        display: none;
+    }
+	.lxx{
+		display:block; 
+	}
+}
+
+.down_bg{
+  background-image: url('./images/download_bg.png');
+  background-repeat:no-repeat;
+  background-attachment:fixed;
+  background-position:center;
+  -webkit-background-size:cover;
+  background-size:cover;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
+.container-fluid{
+  /*padding:30px 0 0;*/
+  width: 70%;
+  height: 100%;
+  margin: 40px auto;
+}
+.img_left{
+  margin-top: 30px;
+  width: 70%;
+  /*height: 70%;*/
+}
+.img_right{
+  margin-top: 40px;
+  width: 80%;
+}
+.row{
+  width: 100%;
+  height: 100%;
+}
+.downButton{
+  position: absolute;
+  color:#fff;
+  background-color: #d0021b;
+  border: none;
+  border-radius: 6px;
+  width: 220px;
+  height: 35px;
+
+  bottom: 20px;
+  left:180px;
+  /*margin-top: 80px;*/
+  cursor:pointer;
+}
+.downApp{
+  cursor:pointer;
+  text-align:  center;
+}
+.downApp h4{
+
+margin-top: 50px;
+
+}
+
+.lxx h3{
+
+font-weight: bold;
+text-align: center;
+
+}
+.thumbnail{
+	cursor:pointer;
+}
+</style>
+
+<script>
+
+$(function(){
+
+	var href = "#";
+	//获取最新版本地址
+	$.getJSON(PINGYUANIP + "/admin_version/lastestVersionDownload", function(result){
+		if(result['url'] =="#"){
+			$('.downButton').text('即将推出');
+			return;
+		}
+		href = PINGYUANIP + result['url'];
+		  $('.downButton').click(function(){
+			window.location.href = href;
+		  });
+		  $('.downApp').click(function(){
+			window.location.href = href;
+		  });
+	});
+	
+	
+resize();
+	function resize(){
+		var width = $(window).width();
+			if(width > 960){
+		$('.lxx').hide();
+		$('.copyright').show();
+		}else{
+		$('.lxx').show();
+		$('.copyright').hide();
+		}
+
+
+	}
+	$(window).resize(function(){
+resize();
+	});
+
+});
+
+</script>
+</head>
+
+<body class="down_bg">
+
+<div style="height:50px"></div>
+
+  <div class="container-fluid frame_Container wyf" style="background-color:transparent!important">
+    <div class="row">
+      <div class="col-xs-12 col-md-8">
+        <img class="img_left" src="images/download_left.png"/>
+        <button class="downButton" >Anroid版下载</button>
+      </div>
+    <div class="col-xs-12 col-md-4">
+      <img class="img_right" src="images/download_right.png"/>
+    </div>
+
+  </div>
+  
+</div>
+
+
+<div class="container lxx" style="text-center;">
+<img class="thumbnail" src="./images/Icon.png" style="margin:0 auto;" />
+<h3>平原村务公开客户端</h3>
+<a class="downApp"><h4>Android下载</h4></a>
+</div>
+
+<div class="push"></div>
+<div class="copyright" id="footer">
+  <div class="container">
+    <p>Copyright&copy;平原村务公开网 &nbsp;&nbsp;备案号：苏ICP备201600001号 &nbsp;&nbsp;技术支持：南京软件研究院</p>
+  </div>
+</div>
+
+
+
+</body>
+
+
+
+
+
+</html>

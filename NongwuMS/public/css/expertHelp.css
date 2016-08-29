@@ -1,0 +1,196 @@
+ul.side_nav{
+  width:100px;
+  float:left;
+  margin-top: 20px;
+}
+ul.side_nav li{
+  width:103px;
+}
+ul.side_nav li a{
+  width:103px;
+}
+
+.rframe {
+  width:780px;
+  float:left;
+  margin-left: 60px;
+  margin-top: 28px;
+}
+
+.rframe ul{
+	list-style: none;
+  padding: 0px;
+  width: 90%;
+}
+
+.rframe ul li{
+	background-color: #fff;
+  margin-bottom: 40px;
+	position: relative;
+  height: 280px;
+  box-shadow: 3px 3px 10px #9b9b9b;
+}
+
+.rframe ul li .location{
+  float: right;
+  margin-right: 170px;
+  margin-top: 36px;
+}
+
+.rframe ul li .location img{
+  float: left;
+  margin-right: -10px;
+  margin-top: -4px;
+}
+
+.rframe ul li .location .word{
+  float: left;
+  margin-left: 20px;
+  /*padding-top: 10px;*/
+}
+
+.rframe ul li p{
+  position: absolute;
+  left:100px;
+}
+
+.rframe ul li .head{
+	width: 60px;
+	height: 60px;
+	margin: 8px;
+  border-radius: 50%;
+}
+.rframe ul li .name{
+  top:0px;
+	font-size: 1.50em;
+}
+
+.rframe ul li .time{
+  top:30px;
+	font-size: 0.8em;
+	color: #4a4a4a;
+}
+.rframe ul li .title{
+  top:45px;
+  font-size: 1.32em;
+}
+
+.rframe ul li .content_img{
+  position: absolute;
+  height: 130px;
+  top:100px;
+  left:100px;
+}
+.rframe ul li .bottom_div{
+  position: absolute;
+  height: 40px;
+  width: 100%;
+  bottom: 0px;
+  background-color: #EEEEEE;
+}
+
+/*.rightframe_help ul li .bottom_div .location{
+  position: absolute;
+  left: 22px;
+  bottom: 10px;
+  text-align: left;
+}
+.rightframe_help ul li .bottom_div p{
+  left: 42px;
+  bottom: 0px;
+  font-size: 0.8em;
+  color: #4a4a4a;
+  text-align: left;
+}*/
+
+/*.rightframe_help ul li .bottom_div table td{
+  padding-left: 60px;
+}*/
+
+.rframe ul li .bottom_div .bottom_info{
+  float: left;
+  margin-left: 50px;
+  margin-top: 5px;
+  height:39px;
+
+}
+.bottom_info img{
+  margin-top: 5px;
+}
+.rframe ul li .bottom_div .bottom_info .word{
+  margin-top: -28px;
+  margin-left: 40px;
+  color: #9b9b9b;
+}
+
+.rframe ul li .bottom_div .answerbtn{
+  color:#fff;
+  position: absolute;
+  /*top:0px;*/
+  bottom: 6px;
+  right: 30px;
+  width: 80px;
+  height: 28px;
+  text-align: center;
+  font-size: 0.85em;
+  line-height: 30px;
+  background-color: #34ab30;
+  border-radius:15px;
+  -webkit-border-radius:15px;
+  -moz-border-radius:15px;
+  box-shadow: 3px 3px 5px #9b9b9b;
+}
+
+.right_title{
+  font-size: 25px;
+  font-weight: bold;
+  margin-top:-20px;
+}
+.expertHelpForm{
+  background-color: #fff;
+  width: 90%;
+  height: 250px;
+  position: relative;
+  border: none;
+  border: 1px solid #979797;
+}
+
+.help_input_text{
+  height: 200px;
+  width: 99%;
+  border: none;
+  border-bottom:1px solid #979797;
+  resize:none;
+  font-size: 20px;
+}
+.help_input_submit{
+  background-color: #34ab30;
+  width:90px;
+  height: 30px;
+  color: #fff;
+  border: 0px;
+  border-radius:15px;
+  -webkit-border-radius:15px;
+  -moz-border-radius:15px;
+  position: absolute;
+  top:212px;
+  right: 20px;
+}
+
+#input_all{
+  position: relative;
+}
+#input_camera {
+  position: absolute;
+  width: 30px;
+  /*height: 20px;*/
+  bottom: 16px;
+  left: 18px;
+}
+
+#input_loaction{
+  position: absolute;
+  width: 11px;
+  bottom: 16px;
+  left: 70px;
+}

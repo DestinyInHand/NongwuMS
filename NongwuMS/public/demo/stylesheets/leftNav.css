@@ -1,0 +1,49 @@
+ul{
+	list-style: none;
+}
+
+#leftNavSearchTag{
+	height:20px;
+	overflow:hidden;
+	font-size:10px;
+}
+.leftNav{
+}
+.leftNav a{
+	color:#333333;
+}
+.leftNav a:hover{
+	text-decoration: none;
+	color:#E30000;
+}
+
+.leftNav ul.lxxnav{
+	width: 300px;
+	font-size: 16px;
+	position: relative;
+}
+
+
+.leftNav ul > li.active, .leftNav ul > li.active a{
+	color:#E30000;
+}
+
+.leftNav ul > li{
+	text-align: center;
+	cursor: pointer;
+	line-height: 45px;
+	height:45px;
+}
+.leftNav ul > li.input{
+	/*width:170px;*/
+	margin:15px 0;
+}
+
+.leftNav .indecate{
+	position: absolute;
+	width: 8px;
+	height: 18px;
+	background: #E30000;
+	left: 220;
+	border-radius: 8px;
+}

@@ -1,0 +1,256 @@
+body{
+	margin: 0px;
+	padding: 0px;
+}
+
+.main{
+	width: 1000px;
+	height: 700px;
+/* 	background-color: gray; */
+	margin: auto;
+	/*margin-top: 25px;*/
+}
+
+.main .left{
+	float:left;
+	width:30%;
+	height: 100%;
+/* 	background-color: rgba(0,102,0,0.88); */
+}
+
+.main .left .top{
+	width:100%;
+	height: 15%;
+	background-color: rgb(46,50,56);
+}
+
+.main .left .top .user{
+	padding-top: 10px;
+	padding-left: 20px;
+}
+
+.main .left .top .user img{
+	float: left;
+}
+
+.main .left .top .user div{
+	color: white;
+	font-weight: bolder;
+	float: left;
+	margin-top: 10px;
+	margin-left: 10px;
+}
+
+.main .left .top .search{
+	float: left;
+	width:87%;
+	height:35px;
+	background-color: rgb(38,41,46);
+	margin-top: 10px;
+	margin-left: 20px;
+	color:#ffffff;
+}
+
+.main .left .top .search img{
+	float: left;
+	height:20px;
+	margin-top: 6px;
+	width:20px;
+	margin-left: 4px;
+
+}
+
+.main .left .top .search input{
+	height:32px;
+	width:80%;
+	margin-left: 10px;
+	float:left;
+	background:rgb(38,41,46);
+	border-style: none;
+	color:#ffffff;
+	border:0px;
+	outline:medium;
+}
+.main .left .top .search input::-webkit-input-placeholder{
+	color:#ffffff;
+}
+.main .left .top .search input::-ms-input-placeholder{
+	color:#ffffff;
+}
+.main .left .top .search input:-moz-placeholder{
+	color:#ffffff;
+}
+
+.main .left .top .search input:focus{
+	border:0px solid white;
+}
+
+.main .left .list{
+	width:100%;
+	height: 85%;
+	background-color: rgb(46,50,56);
+}
+
+.main .left .list .chatMenu{
+	width:100%;
+	height: 45px;
+	background-color:#6A656B;
+}
+
+.main .left .list .chatMenu .chatMenuOption{
+	float: left;
+}
+
+.main .left .list .chatMenu .chatMenuCutoff{
+	width: 2px;
+	height: 60%;
+	background-color: white;
+	margin-top: 12px;
+}
+
+.main .left .list .chatMenu img{
+	margin-top:10px;
+	margin-left:33px;
+	margin-right:33px;
+/* 	float: left; */
+}
+
+.main .left .list .chatObject{
+	margin-top:10px;
+	width:100%;
+}
+
+.main .left .list .chatObject .chatOne{
+	float: right;
+	width:98%;
+	height:40px;
+	background-color: rgba(0,102,0,0.88);
+	margin-top: 5px;
+}
+
+.main .left .list .chatObject .chatOne img{
+	float: left;
+}
+
+
+.main .left .list .chatObject .chatOne .objName{
+	float: left;
+	color: white;
+	font-weight: bolder;
+	margin-left: 20px;
+	margin-top: 10px;
+}
+
+.main .rightNone{
+	float:left;
+	width:70%;
+	height:100%;
+	text-align: center;
+	background-color: #E9E9E9;
+}
+
+.main .rightNone p{
+	margin-top: 45%;
+	color: gray;
+	letter-spacing: 5px;
+}
+
+.main .right{
+	float:left;
+	width:70%;
+	height:100%;
+	background-color: #E9E9E9;
+}
+
+.main .right .rightCutoff{
+	background-color: #D3D3D3;
+}
+
+.main .right .rightHead{
+	width: 100%;
+	height: 5%;
+/* 	background-color: red; */
+}
+
+.main .right .rightMiddle{
+	width:100%;
+	height:68%;
+/* 	background-color: gray; */
+}
+
+.main .right .rightMiddle .chatArea{
+	width:95%;
+	height:98%;
+	overflow:auto;
+/* 	background-color: gray; */
+	margin-top: 4%;
+	margin: auto;
+}
+
+.main .right .rightMiddle .chatArea .chatMessage{
+	color: gray;
+	margin-top: 10px;
+}
+
+.main .right .rightBottom{
+	width:100%;
+	height:20%;
+/* 	background-color: gray; */
+	margin-top: 10px;
+}
+
+.main .right .rightBottom .rightOpreation{
+	width:100%;
+	height: 18%;
+/* 	background-color: gray; */
+}
+
+.main .right .rightBottom .rightOpreation img{
+	margin-left: 30px;
+}
+
+.main .right .rightBottom .rightInput{
+	width:100%;
+	height: 62%;
+	margin-top: 10px;
+/* 	background-color: gray; */
+}
+
+.main .right .rightBottom .rightInput .input{
+	float:right;
+	margin-right: 5px;
+	resize: none;
+	overflow: auto;
+	border:0px;
+	width:96%;
+	/*height:74px;*/
+	height: 100%;
+	background: #E9E9E9;
+	outline: medium;
+	font-size: 20px;
+}
+
+.main .right .rightBottom .rightSend{
+	width:100%;
+	height: 20%;
+/* 	background-color: gray; */
+}
+
+.main .right .rightBottom .rightSend #send{
+	float: right;
+	border:0px;
+	width:80px;
+	height:85%;
+	outline: medium;
+	border-radius: 5px;
+}
+.main .right .rightBottom .rightSend #send:hover{
+	background: #D2ECBC;
+}
+
+.main .right .rightCutoff{
+	height:1px;
+	width:95%;
+/* 	background-color: grey; */
+	margin-left: 2%;
+}

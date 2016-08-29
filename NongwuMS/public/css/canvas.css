@@ -1,0 +1,22 @@
+#viewFront{
+    z-index:8;position: absolute;width: 840px;height: 402px;top:0px;
+}
+#viewMiddle{
+    z-index:5;position: absolute;width: 840px;height: 402px;top:0px;
+}
+#viewBack{
+    top:0px;
+}
+.border_choose{
+	background: grey;
+}
+
+#canvasContainer{
+	width:840px;height:402px;position:absolute;
+}
+
+canvas{
+    border-radius: 10px;
+}
+
+

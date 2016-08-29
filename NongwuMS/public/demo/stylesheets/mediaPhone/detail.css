@@ -1,0 +1,88 @@
+/*页脚版权信息*/
+.push{
+  height: 40px;
+  clear:both;
+}
+container{
+  width: 100% !important;
+}
+.frame_Container{
+   width: 95% ;
+   background-color: #fafafa;
+   min-height:100%;
+   height:auto!important;
+   margin:0 auto -40px;/*margin-bottom的负值等于footer高度*/
+   padding-left: 8px;
+   padding-right: 8px;
+}
+
+.table-responsive{
+  border:none;
+}
+
+.copyright{
+  width: 100%;
+  background:#d0021b;
+  font-size:0.65em;
+  text-align:center;
+  color:#fff;
+  height:45px;
+  padding-top: 8px;
+}
+.copyright p{
+  text-align: center;
+}
+.copyright span{
+  display:block;
+}
+/*.copyright .container{
+  padding-top: 16px;
+  width:100%;
+  height: 60px;
+}*/
+/*---页脚版权信息end---*/
+
+
+body{
+  background:#fafafa;
+  font-size: 0.7em;
+}
+html,body{
+  height:100%;
+  margin:0;
+  padding:0;
+}
+/*set html font*/
+body{
+    font-family:
+    "SimHei",
+    "STHeiti Light",
+    "微软雅黑",
+    "Microsoft YaHei",
+    Helvetica,
+    "ff-tisa-web-pro-1",
+    "ff-tisa-web-pro-2",
+    "Lucida Grande",
+    "Helvetica Neue",
+    Arial,
+    "Hiragino Sans GB",
+    "Hiragino Sans GB W3",
+    "WenQuanYi Micro Hei",
+    sans-serif
+}
+h1,.h1,h2,.h2,h3,.h3,h4,.h4,h5,h6,p{
+    font-family:
+    "SimHei",
+    "STHeiti Light",
+    "微软雅黑",
+    "Microsoft YaHei",
+    Helvetica,
+    "ff-tisa-web-pro-1",
+    "ff-tisa-web-pro-2",
+    "Lucida Grande",
+    "Helvetica Neue",
+    Arial,
+    "Hiragino Sans GB",
+    "Hiragino Sans GB W3","WenQuanYi Micro Hei",
+    sans-serif
+}

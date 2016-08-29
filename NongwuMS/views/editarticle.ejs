@@ -1,0 +1,225 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="renderer" content="webkit">
+  <title>发表文章</title>
+  <script charset="utf-8" src="/javascripts/jquery-2.2.1.js"></script>
+  <link rel='stylesheet' href='/stylesheets/bootstrap/css/bootstrap.css' />
+  <link rel='stylesheet' href='/stylesheets/index.css' />
+  <link rel='stylesheet' href='/stylesheets/admin/UploadPic.css' />
+  <script charset="utf-8" src="/stylesheets/bootstrap/js/bootstrap.js"></script>
+  <script charset="utf-8" src="/javascripts/admin/UploadPic.js"></script>
+  
+
+<!-- UEditor -->
+    <script type="text/javascript" charset="utf-8" src="/uedit/ueditor.config.js"></script>
+    <script type="text/javascript" charset="utf-8" src="/uedit/ueditor.all.min.js"> </script>
+    <!--建议手动加在语言，避免在ie下有时因为加载语言失败导致编辑器加载失败-->
+    <!--这里加载的语言文件会覆盖你在配置项目里添加的语言类型，比如你在配置项目里配置的是英文，这里加载的中文，那最后就是中文-->
+    <script type="text/javascript" charset="utf-8" src="/uedit/lang/zh-cn/zh-cn.js"></script>
+  <script>
+
+    $(function(){
+      var ue = UE.getEditor('contentUE');
+      ue.ready(function() {
+          var content = $('#hideContent').text().replace(/&quot;/g, '\"').replace(/&apos;/g, "\'");
+          ue = UE.getEditor('contentUE');
+          ue.setContent(content);
+      });
+      
+      var regionid = $('.regionidSpan').html();
+      if(regionid){
+        $('.regionidSelect').val(regionid);
+      }else{
+        $('option').first().attr('checked', 'checked');
+      }
+      
+
+      var categoryid = $('.categoryidSpan').text().replace(/[\r\n]/g,"");//;
+      // var categoryid = $('.categoryidSpan').html();
+      if(categoryid){
+        $("input[value="+categoryid+"]").attr('checked', 'checked');
+      }else{
+        $("input[type='radio']").first().attr('checked', 'checked');
+      }
+
+      $('.submiting').click(function(){
+          var content = ue.getContent();
+          $('textarea[name="content"]').html(content);
+          $('form').submit();
+          // var parame = {};
+          // parame['content'] = ue.getContent();
+          // parame['articleid'] = $('input[name="articleid"]').val();
+
+          // parame['ttitle'] = $('input[name="ttitle"]').val();
+          // parame['smallID'] = $('input[name="smallID"]').val();
+          // parame['page'] = $('input[name="page"]').val();
+          // parame['title'] = $('input[name="title"]').val();
+          // parame['categoryid'] = $('input[name="categoryid"]').val();
+
+
+      });
+
+		});
+   
+  </script>
+</head>
+<body>
+  <nav class="navbar navbar-default ">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">后台管理</a>
+      </div>
+		<% if(isSuperAdmin==1) {%>
+		<% show = "block"%>
+		<% } else {%>
+		<% show = "none"%>
+		<% }%>
+      <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse top-nav" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav nav_list">
+          <li >
+            <a href="index" style="display:<%=show%>">
+              用户管理
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <li  >
+            <a href="/admin_region" style="display:<%=show%>">栏目管理</a>
+          </li>
+          <!-- <li >
+            <a href="/admin_policy" style="display:<%=show%>">惠农政策</a>
+          </li>
+          <li>
+            <a href="/admin_project" style="display:<%=show%>">惠农项目</a>
+          </li> -->
+          <li>
+            <a href="/admin_event">内容管理</a>
+          </li>
+          <li>
+            <a href="/admin_analyze" style="display:<%=show%>">调查统计</a>
+          </li>
+
+        </ul>
+
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <a href="#" style="padding-right: 0px">
+              <%= username %>
+            </a>
+            
+          </li>
+          <li style="margin-left: 0px">
+            <a href="/admin_login/logout" style="color:#337AB7">注销</a>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="content">
+
+   <!--  <form class="form-horizontal" name="example" method="post" action=""> -->
+      <form enctype="multipart/form-data"  action="<%= go%>" id="form1" name="example" method="post" class="form-horizontal">
+
+<input name="articleid" value="<%= article['id']%>" style="display:none;"></input>
+<input name="ttitle" value="<%= encodeURI(article['ttitle'])%>" style="display:none;"></input>
+<input name="smallID" value="<%= article['smallID']%>" style="display:none;"></input>
+<input name="page" value="<%= article['page']%>" style="display:none;"></input>
+
+    <!-- 这里是发布文章的图片 -->
+      <div class="form-group">
+        <label for="inputEmail3" class="col-sm-2 control-label" style="height:90px;line-height:90px;">图片</label>
+        <div class="col-sm-10" style="height:100px;">
+          <div id="LXXUploadPic" LXXCol="1" LXXRow="1" LXXWidth="100" LXXHeight="100"></div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="inputEmail3" class="col-sm-2 control-label">标题</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="title" placeholder="请输入标题" style="width:600px" name="title" value='<%= article["title"]%>'></div>
+      </div>
+      <!-- 关联乡镇 -->
+
+<span class="regionidSpan" style="display:none;"><%= article['regionid']%></span>
+
+      <%  if (hide=="0"){ %>
+      <div class="form-group">
+        <label for="inputPassword3" class="col-sm-2 control-label">关联栏目</label>
+        <div class="col-sm-10" style="width:300px">
+          <select class="form-control regionidSelect" name="regionid">
+          
+            <% for(var v in villages){ %>
+            <option value="<%= villages[v]["id"]%>"><%= villages[v]['name']%></option>
+            <%}%>
+          </select>
+        </div>
+      </div>
+
+      <!-- <hr style="background-color: red"> -->
+      <div class="form-group" hidden="true">
+        <div class="col-sm-offset-2 col-sm-3" >
+          <div class="radio">
+            <label>
+              <input class="categoryidInput" type="radio" name="categoryid" value="1">党务公开</label>
+          </div>
+        </div>
+
+       <!--  <div class="radio">
+   <label>
+      <input type="radio" name="optionsRadios" id="optionsRadios1" 
+         value="option1" checked> 选项 1
+   </label>
+</div> -->
+
+
+<span class="categoryidSpan" style="display:none;"><%= article['categoryid']%></span>
+
+        <div class="col-sm-offset-2 col-sm-3">
+          <div class="radio">
+            <label>
+              <input type="radio" name="categoryid" value="2">事务公开</label>
+          </div>
+        </div>
+
+        <div class="col-sm-offset-2 col-sm-3">
+          <div class="radio">
+            <label>
+              <input type="radio" name="categoryid" value="3">财务公开</label>
+          </div>
+        </div>
+
+        <div class="col-sm-offset-2 col-sm-3">
+          <div class="radio">
+            <label>
+              <input type="radio" name="categoryid" value="4">惠农资金</label>
+          </div>
+        </div>
+      </div>
+      <% }%>
+
+   <!-- 加载编辑器的容器 -->
+    <div style="height:20px;"></div>
+    <script id="contentUE" name="contentUE" type="text/plain" style="width:820px;height:400px;"></script>
+    <textarea name="content" id="content" cols="100" rows="8" style="display:none;"></textarea>
+    <% console.log(article['content']); %>
+	<div id="hideContent" style="display:none;"><%= article['content']%></div>
+      <br/>
+      <p style="text-align:center;" >
+        <input class="submiting btn btn-success" name="button" value="提交内容" />
+      </p>
+      </form>
+    <!-- </form> -->
+    </body>
+  </html>
